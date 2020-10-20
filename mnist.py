@@ -66,6 +66,7 @@ for epoch in range(epochs):
         running_loss += loss.item()
         if times % 100 == 99 or times+1 == len(trainLoader):
             print('[%d/%d, %d/%d] loss: %.3f' % (epoch+1, epochs, times+1, len(trainLoader), running_loss/2000))
+            running_loss = 0.0
 
 print('Training Finished.')
 
